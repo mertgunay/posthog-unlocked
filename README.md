@@ -1,3 +1,30 @@
+## 🔓 Unlimited Projects for PostHog – Self-Hosted Fork
+
+This is a minimal fork of the [PostHog](https://github.com/PostHog/posthog) open-source repository.
+
+**The only change made** is removing the artificial limit that restricts self-hosted users to a single project (team).  
+This fork allows you to create **multiple projects** when running PostHog on your own infrastructure.
+
+### ⚙️ What's Different
+
+- `Organization.MAX_TEAMS` was increased (e.g. from 1 to 1,000,000)
+- `Organization.can_create_more_teams()` always returns `True`
+- All other features remain **untouched**
+- The `/ee` (Enterprise Edition) code is **not included**, used, or altered in any way
+
+### ✅ Legality & License
+
+This fork operates **within the boundaries of the MIT license** provided by PostHog.  
+According to [PostHog's own documentation](https://github.com/PostHog/posthog#enterprise-edition):
+
+> While most of PostHog is MIT-licensed, some features in the `/ee` directory are proprietary and require a license key from us.
+
+This project does **not use**, include, or interact with the `/ee` directory at all.
+
+It is **not intended for resale, redistribution, or commercial use** – only for **personal or educational purposes**  
+by self-hosted users who want to overcome the single-project limitation in their own deployments.
+
+
 <p align="center">
   <img alt="posthoglogo" src="https://user-images.githubusercontent.com/65415371/205059737-c8a4f836-4889-4654-902e-f302b187b6a0.png">
 </p>
