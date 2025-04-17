@@ -963,7 +963,8 @@ def get_can_create_org(user: Union["AbstractBaseUser", "AnonymousUser"]) -> bool
         else:
             logger.warning("You have configured MULTI_ORG_ENABLED, but not the required premium PostHog plan!")
 
-    return False
+    # Self‑host unlock: always allow creating more orgs/projects
+    return True
 
 
 def get_instance_available_sso_providers() -> dict[str, bool]:
